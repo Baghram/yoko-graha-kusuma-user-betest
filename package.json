@@ -1,0 +1,12 @@
+{
+  "name": "yoko-graha-kusuma-betest",
+  "version": "1.0.0",
+  "description": "BE Test User Server",
+  "main": "./bin/http.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "SET NODE_ENV=development&&nodemon ./bin/http.js"
+  },
+  "author": "Yoko",
+  "license": "ISC"
+}
