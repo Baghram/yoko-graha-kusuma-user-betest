@@ -15,17 +15,17 @@ class UserController {
             accountNumber: query.accountNumber,
           });
           if (!userExist) throw new Error("User Does Not Exist");
-          data = await User.findOne({ accountNumber: query.accountNumber });
+          data = await User.findOne({ accountNumber: query.accountNumber }).select('-password');
         }
         if (query.identityNumber) {
           let userExist = await User.exists({
             identityNumber: query.identityNumber,
           });
           if (!userExist) throw new Error("User Does Not Exist");
-          data = await User.findOne({ identityNumber: query.identityNumber });
+          data = await User.findOne({ identityNumber: query.identityNumber }).select('-password');
         }
       } else {
-        data = await User.find();
+        data = await User.find().select('-password');
       }
       return res.status(200).json({
         message: "Get User Success",
