@@ -5,7 +5,8 @@
   "main": "./bin/http.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "SET NODE_ENV=development&&nodemon ./bin/http.js"
+    "start": "node ./bin/http.js",
+    "dev": "SET NODE_ENV=development&&nodemon ./bin/http.js"
   },
   "author": "Yoko",
   "license": "ISC",
